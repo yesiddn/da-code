@@ -1,0 +1,38 @@
+---
+interface Props {
+  pageTitle: string;
+}
+
+const pages = [
+  { title: 'Home', href: '/' },
+  { title: 'Services', href: '/services' },
+  { title: 'Case', href: '/case' },
+  { title: 'DaCode Specialists', href: '/dacode-specialists' },
+  { title: 'Request a quote', href: '/' },
+];
+
+const { pageTitle } = Astro.props;
+---
+<nav>
+  <ul class="flex justify-between space-x-4 items-center">
+    {
+      pages.map(page => 
+        {
+          if (page.title !== 'Request a quote') {
+            return (
+              <li class={`${page.title === pageTitle ? 'text-black' : 'text-dark'} font-bold decoration-wavy hover:text-black hover:underline`}>
+                <a href={page.href}>{page.title}</a>
+              </li>
+            )
+          } else {
+            return (
+              <li class={`bg-seconday text-white font-bold ml-8 p-3 rounded-full`}>
+                <a href={page.href}>{page.title}</a>
+              </li>
+            )
+          }
+        }
+      )
+    }
+  </ul>
+</nav>
