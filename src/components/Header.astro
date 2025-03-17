@@ -8,8 +8,10 @@ interface Props {
 const { pageTitle } = Astro.props;
 ---
 
-<header class="fixed flex justify-around w-full my-8">
-  <img src="img/logo.svg" alt="DaCode logo">
+<header class="fixed flex justify-around items-center w-full py-8 bg-white z-50">
+  <a href="/">
+    <img src="img/logo.svg" alt="DaCode logo">
+  </a>
 
   <NavBar pageTitle={pageTitle} />
 </header>
