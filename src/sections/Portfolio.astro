@@ -1,0 +1,40 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = [
+  {
+    img: "/img/project-1.jpg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+  },
+  {
+    img: "/img/project-2.jpg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+  },
+  {
+    img: "/img/project-3.jpg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+  },
+];
+---
+
+<section>
+  <div>
+    <span>Portfolio</span>
+    <h2>Out Great Work</h2>
+  </div>
+
+  <div>
+    <a href="/">Design</a>
+    <a href="/">Web Development</a>
+    <a href="/">Marketing</a>
+  </div>
+
+  <div>
+    {
+      projects.map((project) => (
+        <ProjectCard img={project.img} description={project.description} />
+      ))
+    }
+    <a href="/">See All</a>
+  </div>
+</section>
