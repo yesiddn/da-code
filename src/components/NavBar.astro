@@ -13,20 +13,20 @@ const pages = [
 
 const { pageTitle } = Astro.props;
 ---
-<nav>
-  <ul class="flex justify-between space-x-4 items-center">
+<nav class="grid grid-rows-[0] row-[2/3] overflow-x-auto col-span-full transition-[grid-template-rows] data-[open]:grid-rows-[1fr] lg:flex md:justify-center" id="navbar">
+  <ul class="grid items-center justify-center gap-4 text-center lg:flex lg:space-x-4">
     {
       pages.map(page => 
         {
           if (page.title !== 'Request a quote') {
             return (
-              <li class={`${page.title === pageTitle ? 'text-black' : 'text-dark'} font-bold decoration-wavy hover:text-black hover:underline`}>
+              <li class={`m-0 mt-6 ${page.title === pageTitle ? 'text-black' : 'text-dark'} font-bold decoration-wavy hover:text-black hover:underline lg:mt-0`}>
                 <a href={page.href}>{page.title}</a>
               </li>
             )
           } else {
             return (
-              <li class={`bg-seconday text-white font-bold ml-8 p-3 rounded-full`}>
+              <li class={`m-0 mt-6 bg-seconday text-white font-bold p-3 rounded-full lg:mt-0`}>
                 <a href={page.href}>{page.title}</a>
               </li>
             )
