@@ -7,7 +7,7 @@ interface Props {
 const { img, description } = Astro.props;
 ---
 
-<div>
-  <img src={img} alt={description} />
+<div class="max-w-2xs">
+  <img class="max-w-full mb-8 rounded-xl" src={img} alt={description} />
   <p>{description}</p>
 </div>
