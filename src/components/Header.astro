@@ -8,21 +8,23 @@ interface Props {
 const { pageTitle } = Astro.props;
 ---
 
-<header class="fixed grid justify-around items-center grid-cols-4 w-full p-8 gap-x-10 backdrop-blur-md z-50 lg:flex lg:backdrop-blur-0">
-  <a class="col-span-3" href="/">
-    <img src="img/logo.svg" alt="DaCode logo">
-  </a>
+<header class="fixed w-full p-8 backdrop-blur-md z-50 lg:backdrop-blur-0">
+  <div class="grid justify-around items-center grid-cols-4 gap-x-10 lg:flex">
+    <a class="col-span-3" href="/">
+      <img src="img/logo.svg" alt="DaCode logo">
+    </a>
 
-  <NavBar pageTitle={pageTitle} />
+    <NavBar pageTitle={pageTitle} />
 
-  <button class="flex items-center justify-end py-2 lg:hidden group" id="header-navbar-toggle" aria-controls="header-navbar" title="Mostrar Menú" aria-label="Mostrar menú">
-    <div class="flex items-center justify-center p-2 cursor-pointer">
-      <div class="space-y-2">
-        <span class="block h-0.5 w-8 origin-center rounded-full bg-dark/80 transition-transform ease-in-out group-aria-[expanded]:translate-y-[5px] group-aria-[expanded]:rotate-45"></span>
-        <span class="block h-0.5 w-8 origin-center rounded-full bg-dark/80 transition-transform ease-in-out group-aria-[expanded]:-translate-y-[5px] group-aria-[expanded]:-rotate-45"></span>
+    <button class="flex items-center justify-end py-2 lg:hidden group" id="header-navbar-toggle" aria-controls="header-navbar" title="Mostrar Menú" aria-label="Mostrar menú">
+      <div class="flex items-center justify-center p-2 cursor-pointer">
+        <div class="space-y-2">
+          <span class="block h-0.5 w-8 origin-center rounded-full bg-dark/80 transition-transform ease-in-out group-aria-[expanded]:translate-y-[5px] group-aria-[expanded]:rotate-45"></span>
+          <span class="block h-0.5 w-8 origin-center rounded-full bg-dark/80 transition-transform ease-in-out group-aria-[expanded]:-translate-y-[5px] group-aria-[expanded]:-rotate-45"></span>
+        </div>
       </div>
-    </div>
-  </button>
+    </button>
+  </div>
 </header>
 
 <script is:inline>
