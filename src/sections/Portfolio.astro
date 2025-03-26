@@ -14,6 +14,10 @@ const projects = [
     img: "/img/project-3.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
   },
+  {
+    img: "/img/project-4.jpg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+  },
 ];
 ---
 
@@ -23,13 +27,13 @@ const projects = [
     <h2 class="mt-4 font-bold text-4xl">Out Great Work</h2>
   </div>
 
-  <div class="flex justify-center gap-8 mb-20">
+  <div class="flex flex-col justify-center gap-8 w-4/5 mx-auto mb-32 text-center md:flex-row lg:mb-20">
     <a class="py-4 px-8 border-2 border-seconday rounded-full font-bold text-seconday" href="/">Web Development</a>
     <a class="py-4 px-8 rounded-full font-bold text-seconday" href="/">Design</a>
     <a class="py-4 px-8 rounded-full font-bold text-seconday" href="/">Marketing</a>
   </div>
 
-  <div class="relative max-w-screen-lg mx-auto grid grid-cols-3 gap-8">
+  <div class="relative mx-auto grid grid-cols-1 max-w-screen-lg w-11/12 gap-24 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
     <img class="absolute w-1/3 -top-2/5 -translate-x-1/3 -rotate-45 -z-10" src="img/circle-secondary.svg" alt="Circles">
 
     {
@@ -41,5 +45,5 @@ const projects = [
     <!-- <a href="/">See All</a> -->
   </div>
 
-  <div class="absolute w-full h-[45%] bottom-0 bg-dark -z-10"></div>
+  <div class="absolute w-full h-0 bottom-0 bg-dark -z-10 lg:h-[45%]"></div>
 </section>
