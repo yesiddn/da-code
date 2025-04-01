@@ -8,9 +8,10 @@ interface Props {
 const idea = Astro.props;
 ---
 <div>
-  <span>{idea.number}</span>
-  <div>
-    <h3>{idea.title}</h3>
-    <p>{idea.description}</p>
+  <span class="flex justify-center items-center w-16 h-16 text-center rounded-full shadow-xl font-bold text-2xl text-seconday">{idea.number}</span>
+
+  <div class="mt-6 mb-8">
+    <h3 class="mb-4 font-bold text-xl text-dark">{idea.title}</h3>
+    <p class="text-pretty">{idea.description}</p>
   </div>
 </div>
