@@ -26,7 +26,12 @@ const ideas = [
 ]
 ---
 
-<section class="pt-32 overflow-hidden md:pt-40 lg:relative lg:pb-48">
+<section class="relative pt-32 overflow-hidden md:pt-40 lg:relative lg:pb-48">
+  <img src="/img/circle-secondary.svg" alt="Circles" class="absolute w-2/3 max-w-lg top-0 left-0 -translate-1/2 -z-10 md:w-3/5" />
+  <img src="/img/circle-secondary.svg" alt="Circles" class="hidden absolute w-2/3 max-w-lg top-0 right-0 translate-x-8 -translate-y-8 -z-10 lg:block lg:w-1/5" />
+  <img src="/img/circle-secondary.svg" alt="Circles" class="absolute w-2/3 max-w-lg bottom-0 left-0 -translate-x-1/2 translate-y-1/2 -z-10 md:w-3/5" />
+  <img src="/img/circle-dark.svg" alt="Circles" class="hidden absolute w-2/3 max-w-lg bottom-0 right-0 -translate-x-1/5 -translate-y-1/3 -z-10 lg:block lg:w-2/5" />
+  
   <div class="w-4/5 mx-auto text-balance lg:ml-32 lg:max-w-3/5 xl:max-w-4/5 xl:ml-40">
     <h2 class="mb-6 font-bold text-3xl md:text-5xl">Your idea into <span class="text-dark">reality</span></h2>
     <p class="mb-12">We start every web development project with a project manager from daCode interviewing you about the goal with the project. This is for us to be able to come up with a solution for your SaaS business, estimate a timeline, and come up with a budget.</p>
@@ -45,6 +50,6 @@ const ideas = [
   </div>
 
   <div class="w-full flex justify-center mt-20 md:justify-end md:mt-0">
-    <img class="max-w-xl md:max-w-3xl md:translate-x-3/12 md:translate-y-1/5 md:-z-10 lg:absolute lg:max-w-5xl lg:bottom-0 lg:right-0 lg:translate-x-4/12 lg:translate-y-2/12 xl:max-w-7xl" src="/img/working-remotely.png" alt="Working remotely">
+    <img class="w-full max-w-xl md:max-w-3xl md:translate-x-3/12 md:translate-y-1/5 md:-z-10 lg:absolute lg:max-w-5xl lg:bottom-0 lg:right-0 lg:translate-x-4/12 lg:translate-y-2/12 xl:max-w-7xl" src="/img/working-remotely.png" alt="Working remotely">
   </div>
 </section>
