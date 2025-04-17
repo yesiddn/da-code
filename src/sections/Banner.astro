@@ -1,9 +1,13 @@
-<section class="relative py-48 bg-dark overflow-hidden">
+<section class="relative py-48 bg-dark overflow-hidden z-0" aria-labelledby="contact-heading">
   <div class="flex flex-col items-center justify-center gap-8 w-4/5 mx-auto text-center">
-    <h2 class="font-bold text-3xl md:text-5xl">Interested to work with us?</h2>
-    <p>Send a line here get and update daily</p>
-    <a class="py-6 px-12 bg-black rounded-full text-white font-semibold" href="">DaCode@example.com</a>
+    <h2 id="contact-heading" class="font-bold text-3xl md:text-5xl">Interested to work with us?</h2>
+    <p>Send us a message and get daily updates</p>
+
+    <a class="py-6 px-12 bg-black rounded-full text-white font-semibold hover:bg-gray-800 transition-colors" href="mailto:DaCode@example.com" aria-label="Email us">DaCode@example.com</a>
   </div>
 
-  <div class="absolute w-40 h-40 bottom-0 left-0 -translate-x-6 translate-y-6 bg-white opacity-10 rounded-full md:w-60 md:h-60 md:-translate-x-12 md:translate-y-12 lg:w-80 lg:h-80 lg:-translate-x-16 lg:translate-y-16"></div>
+  <div class="absolute w-40 h-40 bottom-0 left-0 -translate-x-6 translate-y-6 bg-white opacity-10 rounded-full -z-10 md:w-60 md:h-60 md:-translate-x-12 md:translate-y-12 lg:w-80 lg:h-80 lg:-translate-x-16 lg:translate-y-16"></div>
+  <div class="absolute w-12 h-6 top-12 right-1/5 bg-white opacity-10 rounded-t-full -z-10"></div>
+  <img src="/img/line-one.svg" alt="Random line" class="absolute top-0 left-0 w-3/5 -z-20 lg:w-2/5" />
+  <img src="/img/line-two.svg" alt="Random line" class="absolute bottom-0 right-0 w-4/5 -z-20 lg:w-2/5" />
 </section>
