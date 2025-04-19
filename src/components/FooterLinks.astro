@@ -1,0 +1,31 @@
+---
+interface Props {
+  links: 
+    {
+      title: string;
+      url?: string;
+    }[];
+}
+
+const { links } = Astro.props;
+---
+
+<ul class="flex flex-col gap-2">  
+  {
+    links.map((link, index) => (
+      <li class={index === 0 ? "mb-4 font-semibold text-lg" : ""}>
+        {
+          link.url ? 
+          (
+            <a class="underline decoration-wavy hover:text-white" href={link.url}>
+              {link.title}
+            </a>
+          ) : 
+          (
+            <span>{link.title}</span>
+          )
+        }
+      </li>
+    ))
+  }
+</ul>
