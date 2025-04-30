@@ -1,13 +1,37 @@
-<section id="blog" class="relative flex flex-row bg-secondary-light py-40 overflow-hidden z-0" aria-labelledby="blog-heading">
+---
+import PostList from "../components/PostList.astro"
+
+const posts = [
+  {
+    title: "Why Your SaaS Business should use WordPress",
+    description: "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
+    url: "/",
+  },
+  {
+    title: "How to Build a SaaS Product with WordPress",
+    description: "A step-by-step guide on how to build a SaaS product using WordPress, from ideation to launch.",
+    url: "/",
+  },
+  {
+    title: "The Future of SaaS and WordPress",
+    description: "An analysis of the future of SaaS and how WordPress fits into that picture.",
+    url: "/",
+  }
+]
+---
+
+<section id="blog" class="relative flex flex-col gap-16 bg-secondary-light py-40 overflow-hidden z-0" aria-labelledby="blog-heading">
   <div class="w-4/5 mx-auto">
     <span class="mb-6 font-bold text-lg text-secondary">News & Articles</span>
     <h2 class="mt-4 mb-6 font-bold text-3xl md:text-5xl" id="blog-heading">DaCode Blog</h2>
-    <p class="mb-12 text-balance">
+    <p class="mb-8 text-balance">
       On DaCode blog we will review the latest in web development for the SaaS-, tech- and crypto industry.
     </p>
-    <a href="/" class="py-3 px-12 border-2 border-secondary rounded-full font-bold text-secondary cursor-pointer">See All</a>
+    <a href="/" class="inline-block py-3 px-12 border-2 border-secondary rounded-full font-bold text-secondary cursor-pointer">See All</a>
   </div>
-  <div></div>
+  <div>
+    <PostList posts={posts} />
+  </div>
 
   <img class="absolute bottom-0 left-0 translate-y-2/5 -translate-x-2/5 w-3/5 max-w-2xs -z-10" src="img/circle-dark.svg" alt="Circles">
   <img class="absolute top-0 left-0 w-3/5 -translate-2/5 max-w-2xs -z-10" src="img/circle-dark.svg" alt="Circles">
