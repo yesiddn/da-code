@@ -1,0 +1,29 @@
+---
+import BlogCard from './BlogCard.astro';
+
+interface Props {
+  posts: {
+    title: string;
+    description: string;
+    url: string;
+  }[]
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="flex gap-8 pb-8 overflow-x-auto snap-x snap-mandatory">
+  <div class="shrink-0 snap-center">
+    <div class="w-4 shrink-0 sm:w-37"></div>
+  </div>
+  {
+    posts.map((post) => (
+      <li class="snap-center shrink-0">
+        <BlogCard {...post} />
+      </li>
+    ))
+  }
+  <div class="shrink-0 snap-center">
+    <div class="w-4 shrink-0 sm:w-37"></div>
+  </div>
+</ul>
